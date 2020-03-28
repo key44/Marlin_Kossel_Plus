@@ -680,7 +680,7 @@
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
     #define DELTA_PRINTABLE_RADIUS 116.0  // (mm)
     // Center-to-center distance of the holes in the diagonal push rods.
-    #define DELTA_DIAGONAL_ROD 267.0        // 267.0(mm)
+    #define DELTA_DIAGONAL_ROD 266.690        // 267.0(mm)
       // Horizontal offset from middle of printer to smooth rod center.
     #define DELTA_SMOOTH_ROD_OFFSET 186.0   // (mm)
     // Horizontal offset of the universal joints on the end effector.
@@ -1088,7 +1088,7 @@
  * Specify a Probe position as { X, Y, Z }
  */
 #if ANYCUBIC_PROBE_VERSION == 2
-  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -15.9 }
+  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -15.7 }
 #elif ANYCUBIC_PROBE_VERSION == 1
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -19.0 }
 #else
