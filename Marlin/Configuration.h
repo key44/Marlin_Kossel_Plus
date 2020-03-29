@@ -514,9 +514,9 @@
   //#define DEFAULT_Kd 440
 
   // Anycubic Kossel - run 'M106 S255' & 'M303 E0 C10 S200'
-  #define DEFAULT_Kp 22.36
-  #define DEFAULT_Ki 1.63
-  #define DEFAULT_Kd 76.48
+  #define DEFAULT_Kp 15.03
+  #define DEFAULT_Ki 0.82
+  #define DEFAULT_Kd 68.62
 
 #endif // PIDTEMP
 
@@ -680,7 +680,7 @@
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
     #define DELTA_PRINTABLE_RADIUS 116.0  // (mm)
     // Center-to-center distance of the holes in the diagonal push rods.
-    #define DELTA_DIAGONAL_ROD 266.204        // 267.0(mm)
+    #define DELTA_DIAGONAL_ROD 266.090       // 267.0(mm)
       // Horizontal offset from middle of printer to smooth rod center.
     #define DELTA_SMOOTH_ROD_OFFSET 186.0   // (mm)
     // Horizontal offset of the universal joints on the end effector.
@@ -711,7 +711,7 @@
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
-  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.046 , -0.417 , 0.371 }
+  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { -0.083 , -0.333 , 0.416 }
 
 #endif
 
@@ -1088,7 +1088,7 @@
  * Specify a Probe position as { X, Y, Z }
  */
 #if ANYCUBIC_PROBE_VERSION == 2
-  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -15.9 }
+  #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -15.8 }
 #elif ANYCUBIC_PROBE_VERSION == 1
   #define NOZZLE_TO_PROBE_OFFSET { 0, 0, -19.0 }
 #else
