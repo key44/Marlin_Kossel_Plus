@@ -678,7 +678,7 @@
 
   #if ENABLED(ANYCUBIC_KOSSEL_PLUS)
     // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-    #define DELTA_PRINTABLE_RADIUS 115.0  // (mm)
+    #define DELTA_PRINTABLE_RADIUS 113.0  // (mm)
     // Center-to-center distance of the holes in the diagonal push rods.
     #define DELTA_DIAGONAL_ROD 266.090       // 267.0(mm)
       // Horizontal offset from middle of printer to smooth rod center.
@@ -702,16 +702,16 @@
   // Distance between bed and nozzle Z home position
   #define DELTA_HEIGHT 278.0            // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -0.44, 0.0, -0.49 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  //#define DELTA_TOWER_ANGLE_TRIM { -0.86, 0.465, -0.465 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
-  //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
- // #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0 , -0.333 , 0.416 }
+  #define DELTA_RADIUS_TRIM_TOWER { -5.0, 5.0, 9.0 }
+  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0 , 0.0 , 0.0 }
 
 #endif
 
@@ -856,7 +856,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 1000, 1000, 1000, 1000}
+#define DEFAULT_MAX_FEEDRATE          { 1000, 1000,800, 1000}
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -869,7 +869,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION       { 3000, 3000, 1000, 3000 }
+#define DEFAULT_MAX_ACCELERATION       { 3000, 3000, 800, 3000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1501,7 +1501,7 @@
 #endif
 
 // Delta only homes to Z
-#define HOMING_FEEDRATE_Z  (60*60) //probe speed contorl ?
+#define HOMING_FEEDRATE_Z  (60*40) //probe speed contorl ?
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
